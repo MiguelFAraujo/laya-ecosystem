@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "laya-ecosystem"
+version = "0.1.0"
+description = "Production utilities, supervisors, lossless context compactors, and fast UI deciders for the Laya / Jev System-1 decision engine."
+readme = "README.md"
+authors = [
+    { name = "Miguel Ferreira de Araújo", email = "miguel@inteligenciadotopo.com.br" }
+]
+license = "Apache-2.0"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.scripts]
+idt-compactor = "laya_ecosystem.fast_compactor:main"
+idt-foreman = "laya_ecosystem.foreman_supervisor:main"
+idt-search = "laya_ecosystem.cortex_jev_search:main"
+idt-action = "laya_ecosystem.browser_ultrafast:main"
+
+[project.urls]
+Homepage = "https://github.com/MiguelFAraujo/laya-ecosystem"
+Documentation = "https://github.com/MiguelFAraujo/laya-ecosystem#readme"
+Repository = "https://github.com/MiguelFAraujo/laya-ecosystem.git"
